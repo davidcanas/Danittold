@@ -1,0 +1,14 @@
+{
+  "name": "danittov4",
+  "version": "4.0",
+  "description": "Um bot multifuncional em desenvolvimento",
+  "main": "src/index.js",
+  "author": "CanasDev",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^13.3.1",
+    "dotenv": "^10.0.0",
+    "erela.js": "^2.3.3",
+    "mongoose": "^6.0.14"
+  }
+}
