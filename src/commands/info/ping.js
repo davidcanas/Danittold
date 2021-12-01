@@ -9,12 +9,9 @@ module.exports = class extends Command {
     }
 
     run = (ctx) => {
-       
-    
-            ctx.msg.reply({
-                content: `interacao`,
-                ephemeral: true
-            })
-       
+
+
+        ctx.msg.reply(`Oi! ${this.client.ws.ping}ms`)
+
     }
 }
