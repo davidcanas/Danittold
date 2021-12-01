@@ -4,7 +4,7 @@ const { readdirSync } = require('fs')
 const { join } = require('path')
 
 const { connect } = require('mongoose')
-const Models = require('../database/models/Main')
+const Models = require('../database/Models/Main')
 
 
 module.exports = class extends Client {
