@@ -1,6 +1,6 @@
 {
   "name": "danittov4",
-  "version": "4.0",
+  "version": "4.0.0",
   "description": "Um bot multifuncional em desenvolvimento",
   "main": "src/index.js",
   "author": "CanasDev",
