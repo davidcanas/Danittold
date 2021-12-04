@@ -4,9 +4,12 @@ module.exports = class extends Command {
     constructor(client) {
         super(client, {
             name: 'botinfo',
-            description: 'Informações do Bot'
+            description: 'Informações do Bot',
+            category: "Info",
+            aliases: ["bi"]
         })
     }
+
 
     run = (ctx) => {
 
@@ -17,3 +20,4 @@ module.exports = class extends Command {
      
     }
 }
+//ctx.msg.options ? args = ctx.msg.options.getString("code") : args = ctx.args.join(' ')

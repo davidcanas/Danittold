@@ -4,7 +4,8 @@ module.exports = class extends Command {
     constructor(client) {
         super(client, {
             name: 'ping',
-            description: 'Teste'
+            description: 'Mostra a minha latência',
+            category: "Info"
         })
     }
 

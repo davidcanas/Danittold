@@ -7,7 +7,14 @@ module.exports = class CommandContext {
     this.interaction
 
     };
- 
+    get commandAuthor() {
+    if (this.msg.user) {
+      return this.msg.user
+    } else { 
+      return this.msg.author
+    }
+    }
+    
     //MsToDate by D4rkB
     MsToDate(ms){
       let seg = Math.floor(ms/1000)

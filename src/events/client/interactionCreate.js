@@ -1,6 +1,6 @@
 const Event = require('../../structures/Event')
 const CommandContext = require("../../structures/CommandContext");
-
+const fs = require("fs")
 
 module.exports = class extends Event {
     constructor(client) {
@@ -23,7 +23,20 @@ module.exports = class extends Event {
                 }
               
                 const ctx = new CommandContext(this.client, interaction)
+             
                 cmd.run(ctx)
+                let currentdate = new Date(); 
+                let date =  currentdate.getDate() + "/"
+                + (currentdate.getMonth()+1)  + "/" 
+                + currentdate.getFullYear() + " @ "  
+                + currentdate.getHours() + ":"  
+                + currentdate.getMinutes() + ":" 
+                + currentdate.getSeconds()
+           
+                if (!fs.existsSync('./logs'))
+     fs.mkdirSync('./logs');
+  fs.appendFileSync(`./logs/latest.md`, `[${date}] - **Interação**: \`${interaction.commandName}\` executado por \`${interaction.user.tag} (${interaction.user.id})\`\n`)
+              
             }
         } else if (interaction.isButton()) {
 

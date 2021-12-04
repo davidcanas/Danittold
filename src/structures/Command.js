@@ -5,6 +5,8 @@ class Command {
         this.description = options.description
         this.options = options.options
         this.requireDatabase = options.requireDatabase
+        this.category = options.category
+        this.aliases = options.aliases || []
     }
 }
 
