@@ -1,5 +1,5 @@
 require('dotenv').config()
-require("./api/main.js")
+
 const Client = require('./src/structures/Client')
 
 const client = new Client({
@@ -15,3 +15,5 @@ const client = new Client({
 })
 
 client.login(process.env.TOKEN)
+module.exports = client
+require("./api/main.js")
