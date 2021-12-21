@@ -6,7 +6,8 @@ module.exports = class extends Command {
         super(client, {
             name: 'eval',
             description: 'Executa algo',
-            category: "Owner",
+            category: "⚙ Dono",
+            identifier: "owner",
             aliases: ["ev"],
             options: [
                 {
@@ -23,7 +24,7 @@ module.exports = class extends Command {
 
         try {
 
-            if (ctx.commandAuthor.id !== '791347446298312724' && ctx.commandAuthor.id !== '718078381199065150' && ctx.commandAuthor.id !== '852650555254767676' && ctx.msg.commandAuthor.id !== "733963304610824252") {
+            if (ctx.commandAuthor.id !== '733963304610824252' && ctx.commandAuthor.id !== '718078381199065150' && ctx.commandAuthor.id !== '852650555254767676' && ctx.commandAuthor.id !== "733963304610824252") {
                 return ctx.msg.reply('Apenas meu criador');
             }
             let texto;
@@ -32,8 +33,7 @@ module.exports = class extends Command {
             } else {
                 texto = ctx.args.join(' ')
             }
-            console.log(texto)
-            console.log(texto)
+           
             if (!texto) return ctx.msg.reply(`<@${ctx.msg.author.id}> Insira algo para ser executado!`)
             const start = process.hrtime();
 

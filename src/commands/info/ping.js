@@ -5,7 +5,8 @@ module.exports = class extends Command {
         super(client, {
             name: 'ping',
             description: 'Mostra a minha latência',
-            category: "Info"
+            category: "📒 Informação",
+            identifier: "info"
         })
     }
 

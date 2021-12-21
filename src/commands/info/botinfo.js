@@ -5,7 +5,8 @@ module.exports = class extends Command {
         super(client, {
             name: 'botinfo',
             description: 'Informações do Bot',
-            category: "Info",
+            category: "📒 Informação",
+            identifier: "info",
             aliases: ["bi"]
         })
     }
@@ -20,4 +21,3 @@ module.exports = class extends Command {
      
     }
 }
-//ctx.msg.options ? args = ctx.msg.options.getString("code") : args = ctx.args.join(' ')

@@ -14,7 +14,23 @@ module.exports = class CommandContext {
       return this.msg.author
     }
     }
-    
+    async createBin(sourcebin, data, language) {
+     
+      const bin = await sourcebin.create(
+          [
+              {
+                  content: data,
+                  language: language
+              },
+          ],
+          {
+              title: "Danitto SourceBin",
+              description: 'Sourcebin created by Danitto',
+          },
+      );
+      return bin
+      
+      }
     //MsToDate by D4rkB
     MsToDate(ms){
       let seg = Math.floor(ms/1000)

@@ -14,7 +14,7 @@ module.exports = class extends Event {
         if (guildDB?.welcome) {
             const welcomeChannel = member.guild.channels.cache.get(guildDB.welcome.channel)
 
-            welcomeChannel?.send(`${member.toString()}, seja bem vindo ao nosso servidor!`)
+            welcomeChannel?.send(`${member.toString()}, bem vindo ao ${member.guild.name} com a sua entrada temos agora ${member.guild.memberCount} membros! `)
         }
     }
 }

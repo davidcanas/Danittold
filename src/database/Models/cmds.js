@@ -10,6 +10,9 @@ const guildSchema = new Schema({
       category: {
         type: String
       },
+      identifier: {
+        type: String
+      },
       aliases: {
         type: Array
       }

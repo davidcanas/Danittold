@@ -5,7 +5,8 @@ module.exports = class extends Command {
         super(client, {
             name: 'calcular',
             description: 'Calcula algo',
-            category: "Util",
+            category: "💡 Utilidades",
+            identifier: "util",
             aliases: ["calc"]
         })
     }
