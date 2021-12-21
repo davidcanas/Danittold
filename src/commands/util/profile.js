@@ -24,9 +24,11 @@ module.exports = class extends Command {
     run = async (ctx) => {
         let userDB = await this.client.db.users.findOne({_id: ctx.commandAuthor.id})
         let badges = userDB.profile.badges.join(",")
+        let sobremim = userDB.profile.sobremim
         console.log(badges)
         const embed = new Discord.MessageEmbed()
         .setTitle(`Perfil de ${ctx.commandAuthor.tag}`)
+        .addField("Sobremim", sobremim)
         .addField("Badges", badges)
-        ctx.msg.reply({message: "Aqui está", embeds: [embed]})
+        ctx.msg.reply({embeds: [embed]})
     }}

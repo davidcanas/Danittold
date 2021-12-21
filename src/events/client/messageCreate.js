@@ -33,6 +33,7 @@ module.exports = class extends Event {
             let userDB = await this.client.db.users.findOne({ _id: msg.author.id })
             if (!userDB) {
                 await this.client.db.users.create({ _id: msg.author.id })
+                return msg.channel.send(`${msg.author}, parece que é o seu 1º comando, então tive que te registrar no meu banco de dados, por favor execute o comando novamente!`)
             }
             /*FIM*/
 

@@ -1,5 +1,5 @@
 require('dotenv').config()
-
+require("./api/main.js")
 const Client = require('./src/structures/Client')
 
 const client = new Client({

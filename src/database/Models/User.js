@@ -6,6 +6,10 @@ const userSchema = new Schema({
         badges: {
         type: Array,
         default: ["🌟"]
+        },
+        sobremim: {
+            type: String,
+            default: "Danitto é lindo ! (Use d/sobremim para editar esta mensagem)"
         }
       
     },
