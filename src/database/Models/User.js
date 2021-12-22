@@ -5,7 +5,7 @@ const userSchema = new Schema({
     profile: {
         badges: {
         type: Array,
-        default: ["🌟"]
+        default: [""]
         },
         sobremim: {
             type: String,
